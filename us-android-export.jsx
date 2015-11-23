@@ -157,7 +157,7 @@ function saveFunc(dpi) {
 		folder.create();
 	}
 
-	var saveFile = File(folder + "/" + Name + ".png");
+	var saveFile = File(folder + "/" + Name + dpi + ".png");
 
 	var sfwOptions = new ExportOptionsSaveForWeb(); 
 		sfwOptions.format = SaveDocumentType.PNG; 
