@@ -2,7 +2,7 @@
  * Android Assets for Photoshop
  * =============================
  *
- * Version: 0.0.5
+ * Version: 0.0.6
  * Author: Gaston Figueroa (Uncorked Studios)
  * Site: uncorkedstudios.com
  * Licensed under the MIT license
@@ -32,6 +32,7 @@ function init() {
     
 	if(!isDocumentNew()) {
 		saveFunc('xxhdpi');
+		saveFunc('xxxhdpi');
 		saveFunc('xhdpi');
 		saveFunc('hdpi');
 		saveFunc('mdpi');
@@ -76,6 +77,9 @@ function resizeDoc(document, scale) {
 	if(scale === 'xxhdpi') {
 		newHeight = calcHeight;
 		newWidth = calcWidth;
+	} else if(scale === 'xxxhdpi') {
+		newHeight = Math.floor(calcHeight / 3 * 4);
+		newWidth = Math.floor(calcWidth / 3 * 4);
 	} else if(scale === 'xhdpi') {
 		newHeight = Math.floor(calcHeight / 3 * 2);
 		newWidth = Math.floor(calcWidth / 3 * 2);
